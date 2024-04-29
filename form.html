@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online form</title>
+</head>
+<body>
+    <h2>html tutorial form</h2>
+    <from action = "backend.php"> 
+     <div>
+        <label for="name">Name :</label>
+         <input type = "text" id= "name">
+    </div>
+     <div>
+        <label for ="date">Date :</label>
+        <input type ="date" id ="date">  </div>
+     <div>email : <input type="email" name="my_email"> </div>
+     <br>
+     <label for = "course">Choose course : </label>
+     
+     <select name = "courses" id = "course">
+        <option value = "python">python</option>
+        <option value = "javascript">javascript</option>
+        <option value = "html">html</option>
+     </select>
+     <br>
+     eligible or not :<input type = "checkbox">
+     <br>
+     Gender : Male <input type="radio" name="mygender">FeMale <input type="radio" name="mygender">
+     <br>
+     Write about yourself :<br><textarea name=" mytext" cols="40" rows="10"></textarea>
+     <br>
+     <input type ="submit" value ="submit now">
+     <input type="reset" value="reset all">
+    </from>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer-tool</title>
+    <style>
+        p {
+            color: purple;
+            font-style: italic;
+            background-color: aqua;
+        }
+
+        div {
+            color: blue;
+        }
+
+        .red {
+            background-color: rgb(214, 246, 190);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+    <h2>......QUIZ Form..... </h2>
+    </p>
+    <hr>
+    <form action="post">
+        <div>
+            <label for="username"> Enter your name : </label>
+            <input type=text, id=username class = red, placeholder="your name ">
+        </div>
+        <div>
+            <label for="pincode">Pincode :
+            </label>
+            <input type="number" class="red" , placeholder="your pin">
+        </div>
+        <label for="state" > State :
+            <select id="state" onchange="state()">
+                <option value="" class=" red" ,placeholder="">
+                    select state
+                </option>
+                <option value="stateUttrahand"> Uttrahand</option>
+                <option value = "stateUP"> UP
+                </option>
+                <option value = "MP">MP </option>
+            </select>
+        </label>
+        <div>  
+            Gender : Male <input type="radio" name="mygender"> Female <input type="radio" name="mygender">
+        </div>
+        <div>
+            <input type = "submit" value ="Submit">
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
