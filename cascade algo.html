@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Cascade algorithm</title>
+    <style>
+        /* the specifity of this selector is : 1 */
+        article {
+            color: aqua;
+            background-color: blueviolet;
+        }
+/* the specifity of these 3 selector is : 10 */
+        .red {
+            color: red !important;
+            background-color: rgb(237, 244, 244) !important;
+        }
+
+        .yellow {
+            color: yellow;
+            background-color: rgb(217, 206, 227);
+        }
+
+        .purple {
+            color: purple;
+            background-color: rgb(182, 219, 182);
+        }
+        /* the specifity of this selector is : 10 */
+ 
+        /* attribute selector */
+        [data-x=a]{
+            color: black;
+            background-color: aqua;
+        }
+        h1::before {
+    content: url(smiley.gif); /* Insert an image */
+}
+
+    </style>
 </head>
+
 <body>
-    
+    <article class="red yellow purple" data-x="a">
+<!-- attribute selector -->
+        this article shows the positions of the style selector defines the property of applying , i.e the last one
+        define class will be apply .
+        
+        <hr>
+        <br>
+        <strong>Specifity</strong> :
+        <strong>inline style </strong>comes so it will be on first priority.
+        <hr>
+        <br>
+        after that "<strong>id selector</strong>"  will come
+        <hr>
+        <br>
+        after that "<strong>class attribute selector</strong>"  will come
+        <hr>
+        <br>
+        
+        >> if same elements selectors are come together so last one will apply
+
+        >> and lastley comes the <strong>important</strong>
+        <br>
+    which are comes before of inline too </article>
+
+    <!-- Pseudo-elements provide powerful ways to enhance your styling options in CSS like =  hr::after, h1::before ,p::first-letter ,p::first-line -->
+
+    <!-- pseudo-classes enhance your styling options by allowing you to apply rules based on various conditions/! like =  button:hover ,button:active , input:focus ,div p:first-child ,ul li:last-child ,ul li:nth-child(3n) -->
 </body>
+
 </html>
