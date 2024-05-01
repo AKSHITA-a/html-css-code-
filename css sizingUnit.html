@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIzing Unit </title>
     <!-- the convinient units are vw and vh and others are rem , em , px -->
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .box{
+
+        .box {
             box-sizing: border-box;
             border: 2px solid black;
             /* width: 2048px; */
@@ -18,7 +20,8 @@
             width: 100vw;
             background-color: aquamarine;
         }
-        .container{
+
+        .container {
             box-sizing: border-box;
             border: 2px solid black;
             width: 100vw;
@@ -26,38 +29,67 @@
             margin: 23px auto;
             font-size: 18px;
             min-height: 40vh;
-           
+
         }
-        html{
+
+        html {
             font-size: 2rem;
         }
-        .container p{
+
+        .container p {
             font-size: 1.5em;
             width: 50%;
             border: 2px solid blue;
-            color :red;
+            color: red;
         }
-        .box2{
-            color:rgb(175, 35, 35);
+
+        .box2 {
+            color: rgb(175, 35, 35);
             background-color: rgb(41, 184, 184);
             font-size: 22px;
             width: 100vmin;
-            border  :solid rgb(40, 2, 2);
+            border: solid rgb(40, 2, 2);
+        }
+        .blocklevel element{
+            border : 2px;
+            display: inline;
+            padding: 40px;
+            margin: 30px;
         }
     </style>
+
 </head>
+
 <body>
-    <p class ="box">This is a box</p>
+    <p class="box">This is a box</p>
     <div class="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur omnis temporibus in! Rem earum suscipit neque necessitatibus, totam enim labore tenetur nihil unde corrupti vero odit molestias qui sapiente dolorum veniam cupiditate. Ut, assumenda in repellat asperiores, sequi velit fugit ducimus totam consectetur quae consequuntur.
-        
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quisquam ducimus, hic cumque laborum fuga velit, cum explicabo nobis quos magni distinctio quam doloremque porro repellat fugit totam alias odio, autem maxime. Aspernatur quod qui magni debitis hic obcaecati quis voluptates modi praesentium. Aliquid nobis placeat ipsa at repellendus atque quos, nam inventore. Aperiam optio amet sunt natus! Nisi laboriosam labore ex? Exercitationem hic culpa perferendis fugiat soluta veritatis. Consequuntur assumenda explicabo saepe est ea ex earum illo, sapiente tempore nisi placeat hic quod molestiae beatae sit incidunt autem. Amet, esse. Molestiae temporibus in aliquid reiciendis atque dolorem adipisci id!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur omnis temporibus in! Rem earum suscipit neque
+        necessitatibus, totam enim labore tenetur nihil unde corrupti vero odit molestias qui sapiente dolorum veniam
+        cupiditate. Ut, assumenda in repellat asperiores, sequi velit fugit ducimus totam consectetur quae consequuntur.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quisquam ducimus, hic cumque laborum fuga velit,
+        cum explicabo nobis quos magni distinctio quam doloremque porro repellat fugit totam alias odio, autem maxime.
+        Aspernatur quod qui magni debitis hic obcaecati quis voluptates modi praesentium. Aliquid nobis placeat ipsa at
+        repellendus atque quos, nam inventore. Aperiam optio amet sunt natus! Nisi laboriosam labore ex? Exercitationem
+        hic culpa perferendis fugiat soluta veritatis. Consequuntur assumenda explicabo saepe est ea ex earum illo,
+        sapiente tempore nisi placeat hic quod molestiae beatae sit incidunt autem. Amet, esse. Molestiae temporibus in
+        aliquid reiciendis atque dolorem adipisci id!
+
         <P>
-            this is the paragraph for considering the EM and REM 
+            this is the paragraph for considering the EM and REM
         </P>
     </div>
     <div class="box2">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, corrupti?
     </div>
+
+    <!-- CSS Display property -->
+    <div class="blocklevel element">
+        i am example of bloc level but print as inline element
+    </div>
+    <span class="blocklevel element" > this is inline element </span>
+    <span class ="blocklevel element">element</span>
+    
 </body>
+
 </html>
