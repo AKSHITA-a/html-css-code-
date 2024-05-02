@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadow and Outline</title>
    <!--CSS list too-->
+   <!--Overflow-->
     <style>
         .box {
             text-align: center;
@@ -17,10 +18,25 @@
             color : purple;
             text-shadow: -4px 1px 2px rgb(255 15 219);
         }
-        nav ul li{
+        .f{
             list-style: gurmukhi;
             background-color: antiquewhite;
             list-style-position: inside;
+        }
+        .s{
+            list-style: "😄";
+        }
+
+        .para1{
+            width: 20vw;
+            height: 20vh;
+            border: 2px solid black;
+            /*overflow : auto;*/
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* white-space: nowrap; */
+            /* text-overflow:ellipsis; */
+          
         }
     </style>
    
@@ -36,12 +52,18 @@
         iusto, harum id adipisci aspernatur doloremque ea hic iste, consequuntur alias deleniti. Est, aut.
     </p>
     <nav>
-        <ul>
+        <ul class ="f">
             <li>HOME</li>
             <li>about</li>
             <li>Contact</li>
         </ul>
+        <ul class="s">
+            <li>email</li>
+            <li>socialID</li>
+        </ul>
     </nav>
+    <div class ="para1">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iusto aut fugit voluptas voluptatum adipisci impedit non nostrum sed exercitationem nam id commodi eos asperiores illo quaerat perspiciatis ipsum at veniam libero quisquam magni, deleniti fuga nemo.
+    </div>
 </body>
-
 </html>
