@@ -5,20 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS variables</title>
+    <!-- css MEADIA QUERY -->
+
+
+    <style>
+        /*  it is a global variable*/
+        :root {
+            --color: rgb(255, 0, 231);
+            --seccolor: rgb(237, 113, 228);
+            --defpad: 13px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: var(--color);
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            opacity: 0.9;
+            padding: var(--defpad);
+            list-style: none;
+            border: 3px solid var(--seccolor);
+
+            /* text-align: left; */
+        }
+
+        /* local variable */
+        ul li:first-child {
+            --color: rgb(224, 110, 149);
+            background-color: var(--color, blue);
+
+        }
+
+        .container {
+            opacity: 0.4;
+            background-color: var(--seccolor);
+        }
+
+        p{
+            margin-top: 30px;
+            padding: 30px;
+            text-align: center;
+            background-color: red;
+        }
+    
+
+        /* @media  not |only mediatype and (expressions)
+        {
+            css code ;
+        }
+        */
+        @media only screen and ( max-width: 400px) {
+            p {
+            background-color: purple;
+        }
+        }
+        
+        
+
+    </style>
 </head>
 
 <body>
-    <div>
+    <div class="nav">
         <ul>
             <li>Home</li>
             <li>About</li>
             <li>Contact</li>
         </ul>
     </div>
+
     <div class="container">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis vero dolore odio sequi natus nulla ducimus
         quisquam? Voluptates quisquam quae ad doloribus ab, minima atque officia ratione, eius modi nemo?
     </div>
+
+    <p>
+        box is here
+    </p>
 </body>
 
 </html>
