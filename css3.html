@@ -5,80 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>selectors</title>
+    <!-- here some more things about the css selectors -->
 
     <style>
-        
         .redelement {
             color: rgb(238, 7, 7);
         }
+
         /* class selector */
         .bgblue {
             background-color: rgba(90, 90, 176, 0.681);
         }
+
         /* id selector */
         #greentext {
             color: rgb(2, 41, 2);
             background-color: rgb(157, 241, 39);
         }
+
         /* grouping selector */
-        footer, span{
-            background-color: pink ;
+        footer,
+        span {
+            background-color: pink;
         }
+
         /* element selector */
-        p{
-            border : 2px solid black;
+        p {
+            border: 2px solid black;
         }
+
         /* this is css comment */
         /* this is child selector */
-        div >p{
-            color :whitesmoke;
+        div>p {
+            color: whitesmoke;
             background-color: black;
         }
+
         /* but the priority of child selectors comes after the id and class selector  and if the property defines into anoother tag then it will not work */
 
         /* but there is another way to remove this problem or condition that is we can define Descendant selector/ */
-        
+
         /* Descendent selector */
-        div p {
-            color :rgb(245, 245, 245);
+        .box p{
+            color: rgb(245, 245, 245);
             background-color: rgba(5, 194, 194, 0.675);
         }
 
         /* Universal Selector */
-        *{
+        * {
             margin: 1;
-            padding : 0;
-        }
-        
-        /* Pseudo Selector basically used for anchor tag lie for changing the color after visiting */
-        a:visited{
-            color :rgba(5, 194, 194, 0.675);
-        }
-        a:link{
-            color : green;
-        }
-        /* use for background color changing */
-        a:active{
-            background-color: antiquewhite;
-        }
-        /* use for background color changing while scroll up them */
-        a:hover{
-            color :rgb(238, 7, 7);
-            background-color: bisque;
+            padding: 0;
         }
 
+        /* Pseudo Selector basically used for anchor tag lie for changing the color after visiting */
+        a:visited {
+            color: rgba(5, 194, 194, 0.675);
+        }
+
+        a:link {
+            color: green;
+        }
+
+        /* use for background color changing */
+        a:active {
+            background-color: antiquewhite;
+        }
+
+        /* use for background color changing while scroll up them */
+        a:hover {
+            color: rgb(238, 7, 7);
+            background-color: bisque;
+        }
     </style>
 </head>
 
 <body>
     <h2> CSS Selectors </h2>
-    <div>
+    <div class = "box">
         <p id="greentext"> 1. this para come into" greentext id "<strong>Selectors</strong></p>
         <p id="redtext" class="redelement bgblue">2 . this text come in "class redelement" with id " redtext"
-            <strong>Selectors</strong></p>
+            <strong>Selectors</strong>
+        </p>
         <p class="redelement">3 .this is a simple "class redelement " <strong>Selectors</strong></p>
 
-        <span>this  is span tag </span>
+        <span>this is span tag </span>
     </div>
     <div>
         <p>this is example of child selector </p>
@@ -88,14 +98,13 @@
     </footer>
     <div>
         <article>
-            this statement come into the "article" with under to the div so here child selectors not wors 
+            this statement come into the "article" with under to the div so here child selectors not wors
         </article>
         <p> this come into the Descendant selector </p>
     </div>
-    <a href = "https://www.google.com">Go to Google</a>
+    <a href="https://www.google.com">Go to Google</a>
     <br>
 
-    <a href = "https://www.facebook2.com">facebook2</a>
+    <a href="https://www.facebook2.com">facebook2</a>
 </body>
-
 </html>

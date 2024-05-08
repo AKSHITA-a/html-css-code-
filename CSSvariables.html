@@ -50,27 +50,49 @@
             background-color: var(--seccolor);
         }
 
-        p{
+        p {
             margin-top: 30px;
             padding: 30px;
             text-align: center;
             background-color: red;
         }
-    
+
 
         /* @media  not |only mediatype and (expressions)
         {
             css code ;
         }
         */
-        @media only screen and ( max-width: 400px) {
+        @media only screen and (max-width: 400px) {
             p {
-            background-color: purple;
-        }
-        }
-        
-        
+                background-color: purple;
+            }
 
+            .box {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and(orientation:landscape) {
+            p{
+                 border :2px solid black;
+            }
+        }
+        
+        .box {
+            display: flex;
+        }
+
+        .b1 {
+            /* margin: 12px; */
+            padding: 12px;
+            border: 2px solid purple;
+            border-radius: 2px;
+            background-color: steelblue;
+            width: 150px;
+            height: 230px;
+
+        }
     </style>
 </head>
 
@@ -91,6 +113,12 @@
     <p>
         box is here
     </p>
+    <div class="box">
+        <div class="b1">BOX1</div>
+        <div class="b1">BOX2</div>
+        <div class="b1">BOX3</div>
+        <div class="b1">BOX4</div>
+    </div>
 </body>
 
 </html>

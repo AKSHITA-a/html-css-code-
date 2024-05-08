@@ -1,6 +1,7 @@
 <!-- 3rd Quiz -->
 <!-- making an image card  -->
-<!DOCTYPE html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,7 +90,8 @@
 <body>
 
     <div class=parent>
-        <!-- image code -->
+         image code -->
+<!--         
         <div class="box">
             <img src="wp3.webp" alt="image">
 
@@ -104,6 +106,69 @@
         </div>
     </div>
 
+</body>
+
+</html> 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changable navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --color: rgb(213, 14, 14);
+            --seccolor: rgb(19, 8, 175);
+            --thrdcolor: rgb(203, 61, 193);
+            --trycolor: rgb(198, 204, 33);
+
+        }
+
+        @media only screen and(max-width : 450px) 
+        {
+            .navbar {
+                background-color: var(--trycolor);
+            }
+        }
+
+        .box {
+            display: flex;
+            padding: 5px 10px 7px 10px;
+
+        }
+
+        .navbar {
+            border: 1px solid;
+            list-style: none;
+            text-align: center;
+            height: 120px;
+            width: 160px;
+            color: var(--seccolor);
+            background-color: var(--thrdcolor);
+            border-color: var(--color);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul class="box">
+                <li class="navbar">Home</li>
+                <li class="navbar">Contact</li>
+                <li class="navbar">Email</li>
+                <li class="navbar">Back</li>
+            </ul>
+        </div>
+    </nav>
 </body>
 
 </html>

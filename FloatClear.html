@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS float nd clear</title>
+    <style>
+        img{
+            float: left;
+        }
+        .card{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        .cards{
+            border: 2px solid red;
+            background-color: aqua;
+        }
+        .cards:nth-child(3){
+background-color: slategray;
+clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://energyeducation.ca/wiki/images/thumb/7/74/Batterydura.jpg/1200px-Batterydura.jpg" width = 100px alt = "image" height="150px" >
+        <div class="cards">CARD1
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero vel ipsum culpa assumenda earum incidunt architecto sunt necessitatibus nobis esse, id similique. Voluptatum!
+            </p>
+        </div>
+        <div class="cards">CARD2</div>
+        <div class="cards">I am a 3rd child </div>
+        <div class="cards">CARD4</div>
+    </div>
+    
+</body>
+</html>
