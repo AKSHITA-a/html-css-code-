@@ -6,23 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More About CSS</title>
     <style>
-        .boxes :first-child {
-            background-color: fuchsia;
+        .box:first-child{
+            background-color: antiquewhite;
         }
-        .boxes :nth-child(2){
+        .box:nth-child(2) {
             background-color: rgb(196, 102, 196);
-            
+margin: 10px;
+            height: 100px;
+        }
+
+        p::first-line{
+            background-color: aquamarine;
+            margin: 10px;
+            height: 100px;
+        }
+
+        .box:nth-child(3) {
+            background-color: rgb(58, 155, 26);
+            margin: 10px;
+            height: 100px;
+        }
+        .boxs *{
+border:2px solid yellow;
+        }
+        .box:nth-child(even){
+            padding-top: 2px;
+        }
+
+        /* the before and after elements are used majorily ,called as psudeo element not selectors */
+        .boxs::before{
+            content:"box speaciality" ;
+        }
+        .boxs::after{
+            content:"box speaciality ended here " ;
+        }
+        ::selection{
+            background-color: rgb(205, 27, 54);
+            color :rgb(215, 233, 57);
+        }
+        ::first-letter{
+            font-size : 40px;
+            color :rgb(19, 19, 19);
         }
     </style>
 </head>
 
 <body>
-
-    <div class="boxes">
+    <div class="boxs">
         <div class="box">here is the 1st box</div>
-        <div class="box">here is the 2nd box</div>
+        <div class="box">here is the 2nd box
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius nam dolor recusandae. Provident aliquid
+                ullam possimus minus maiores sunt aliquam voluptatum rerum laboriosam?
+            </p>
+        </div>
         <div class="box">here is the 3rd box</div>
-
     </div>
 </body>
 
