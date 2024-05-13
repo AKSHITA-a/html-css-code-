@@ -5,21 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-        
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
     </style>
-    <style>
-        :root {
-            --firstcolor: rgb(208, 63, 95);
-            --secndcolor: rgb(129, 231, 150);
-        }
 
+    <style>
         * {
             margin: 0;
             padding: 0;
+        }
+
+        :root {
+            --firstcolor: rgb(208, 63, 95);
+            --secndcolor: rgb(129, 231, 150);
+            --firstbox: aqua;
+            --secndbox: aquamarine;
+        }
+
+        body {
+            background-color: var(--secndcolor)
+        }
+
+        nav {
+            padding: 16px;
+            background-color: var(--firstcolor)
         }
 
         ul li {
@@ -31,18 +41,6 @@
             text-align: center;
         }
 
-        nav {
-            /* border: 2px solid black; */
-position:sticky;
-            padding: 16px;
-            background-color: var(--firstcolor)
-            
-        }
-
-        body {
-            background-color: var(--secndcolor)
-        }
-
         a:hover {
             color: rgb(233, 199, 199);
             background-color: rgb(202, 14, 1);
@@ -50,64 +48,57 @@ position:sticky;
 
         ul li a {
             color: black;
-            
         }
-        
-        .boxes{
+
+        .container {
             display: flex;
-            margin:15px;
-            padding: 23px;
-            box-sizing: border-box;
-            position: absolute;
+            justify-content: space-evenly;
+            row-gap: 30px;
         }
-        .box:nth-child(2){
-            max-width: 830px;
-            width: 101%;
-            background-color: aqua;
-            height: 575px;
-            margin-left: 15px;
-            margin-right: 20px;
+
+        .box {
+            border: 2px solid black;
+            height: 75vh;
+            width: 50vw;
+            margin: 23px;
             border-radius: 16px;
-           
-            text-align: center; font-size:1.5em;
-            
-           
-        }
-        .box:first-child{
-            max-width: 830px;
-            width: 101%;
-            height: 575px;
-            margin-left: 15px;
-            margin-right: 20px;
-            border-radius: 16px;
-            background-color: 
-        aquamarine;
-          
+            position: relative;
+            text-wrap: wrap;
+            font-size: 1.5em;
             text-align: center;
-            font-size:1.5em;
         }
-        .box{
-            border:2px solid black;
-            height: 500px;
-            width: 400px;
+
+        .box:first-child {
+            background-color:
+                var(--secndbox);
         }
-        /* input,input::placeholder{
-            color:var(--secndcolor);
+
+        .box:nth-child(2) {
+            background-color: var(--firstbox);
+        }
+
+        .placeholders {
+            align-self: center;
+            display:grid;
+        }
+
+        input,
+        input::placeholder {
+            color: var(--secndcolor);
             background-color: var(--firstcolor);
-             border-radius: 15px;
-            margin-left: 322px;
+            border-radius: 25px;
             height: 80px;
-            width:290px; 
+            width: 290px;
             text-align: center;
             font-size: medium;
-            
-        } */
+            text-wrap: wrap;
+        }
     </style>
 </head>
 
 <body>
 
-     <!-- Load an icon library -->
+    <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
         <nav>
@@ -116,28 +107,32 @@ position:sticky;
                 <li><a href="/"><i class="fa fa-fw fa-user"></i>About</a></li>
                 <li><a href="/"><i class="fa fa-fw fa-search"></i>Search</a></li>
                 <li><a href="/"><i class="fa fa-fw fa-envelope"></i>Message </a></li>
-                
             </ul>
-            
         </nav>
     </div>
-<div class = boxes>
-    <div class ="box" >
-        <h3>Nature</h3>
-        <p>Nature refers to the inherent character or constitution of the ecosphere or the universe as a whole. In a general sense, it encompasses the laws, elements, and phenomena of the physical world, including life. Humans are part of nature, but at times, human activity is described as being at odds with or even separate from nature.  </p>
-        <!-- <img src="https://source.unsplash.com/360x220/?river "alt = "river"> -->
-    </div>
-    <div class ="box" >
-        <h3>Mountains</h3>
-        <p>Majestic Peaks: Mountains rise like ancient guardians, their peaks piercing the sky. 
-            Silent Sentinels: These stoic giants stand watch over valleys, their rugged faces weathered by eons of wind and rain. 
-            Alpine Meadows: Between craggy cliffs, alpine meadows bloom with wildflowers.relentless journey.that's why Mountains are peace.</p>
+
+    <div class=container>
+        <div class="box">
+            <h3>Nature</h3>
+            <p>Nature refers to the inherent character or constitution of the ecosphere or the universe as a whole. In a
+                general sense, it encompasses the laws, elements, and phenomena of the physical world, including life.
+                Humans are part of nature, but at times, human activity is described as being at odds with or even
+                separate from nature. </p>
+            <!-- <img src="https://source.unsplash.com/360x220/?river "alt = "river"> -->
+        </div>
+        <div class="box">
+            <h3>Mountains</h3>
+            <p>Majestic Peaks: Mountains rise like ancient guardians, their peaks piercing the sky.
+                Silent Sentinels: These stoic giants stand watch over valleys, their rugged faces weathered by eons of
+                wind and rain.
+                Alpine Meadows: Between craggy cliffs, alpine meadows bloom with wildflowers.relentless journey.that's
+                why Mountains are peace.</p>
             <!-- <img src="https://source.unsplash.com/360x220/?mountain "alt = "nature"> -->
+        </div>
     </div>
-</div>
-<div class="other">
-<input type="text"
-    placeholder="i hope this website feel good to you">
-</div>
+    <div class="placeholders">
+        <input type="text" placeholder="i hope this website feel good to you...enter your expeerience">
+    </div>
 </body>
+
 </html>
