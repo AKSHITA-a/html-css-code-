@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid </title>
+    <!-- <style>
+        /* grid line and grid cells ,
+           grid tracker and grid area,  
+           grid templates Rows and Columns*/
+
+            /* they are the container properties only */
+        .container {
+            border: 2px solid black;
+            height: 350px;
+            display: grid;
+            grid-template-columns: [first] 150px [second] 150px ;
+            grid-template-rows: [f] 100px [s] 100px 70px;
+        }
+
+        .item {
+            border: 2px solid rgb(81, 225, 15);
+            height: 63px;
+            width: 82px;
+            background-color: chocolate;
+            font-size: 2em;
+        }
+
+        /*starting from 1 and go upto 2*/
+        /* .item-4{
+            grid-row: 1/2;      same as grid-row-start :1;
+                                        grid-row-end :2;
+            grid-column: 1/2;
+        } */
+        
+    </style> -->
+
+    <!-- 2nd way to use grid for maiking webpage design  -->
+    <style>
+        .container {
+            width:90px
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: 
+                "nav nav nav"
+                "side side article"
+                " footer footer footer";
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .item {
+            border: 1px solid yellow;
+            height: 55px;
+            /* width:55px; */
+        }
+
+        .item-1 {
+            grid-area: nav;
+            height: 30px;
+        }
+
+        .item-2 {
+            grid-area: side;
+            grid-template-columns: 50px 50px;
+        }
+
+        .item-3 {
+            grid-area: article;
+        }
+
+        .item-4 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">
+            <!-- <ul><li><aHOME</li></ul> -->
+        </div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+    </div>
+</body>
+
+</html>
