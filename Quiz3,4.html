@@ -23,10 +23,6 @@
             --secndbox: aquamarine;
         }
 
-        body {
-            background-color: var(--secndcolor)
-        }
-
         nav {
             padding: 16px;
             background-color: var(--firstcolor)
@@ -54,11 +50,13 @@
             display: flex;
             justify-content: space-evenly;
             row-gap: 30px;
+            height:79vh;
+            background-color: var(--secndcolor)
         }
 
         .box {
             border: 2px solid black;
-            height: 75vh;
+            height: 90%;
             width: 50vw;
             margin: 23px;
             border-radius: 16px;
@@ -66,6 +64,8 @@
             text-wrap: wrap;
             font-size: 1.5em;
             text-align: center;
+            overflow: hidden;
+            position :relative;
         }
 
         .box:first-child {
@@ -76,10 +76,25 @@
         .box:nth-child(2) {
             background-color: var(--firstbox);
         }
+        
+        .box img{
+            width :100%;
+            height:100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
 
-        .placeholders {
-            align-self: center;
+        .box p{
+            position:absolute;
+            font-size:xx-large;
+            font-weight: 300;
+        }
+        .bottomBox{
             display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:30px;
+            background-color:var(--firstbox);
+            height:150px
         }
 
         input,
@@ -87,17 +102,31 @@
             color: var(--secndcolor);
             background-color: var(--firstcolor);
             border-radius: 25px;
-            height: 80px;
-            width: 290px;
             text-align: center;
             font-size: medium;
             text-wrap: wrap;
+            grid-column: 2;
+            height: 75px;
+            width: 290px; 
+            justify-self: center;
         }
+
+        .sticyIcon{
+            position: fixed;
+            grid-column:3;
+            height:60px;
+            width:60px;
+            border-radius:50% ;
+            justify-self: end;
+
+        }
+        .sticyIcon:hover {
+    background: #777555;
+}
     </style>
 </head>
 
 <body>
-
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div>
@@ -118,7 +147,7 @@
                 general sense, it encompasses the laws, elements, and phenomena of the physical world, including life.
                 Humans are part of nature, but at times, human activity is described as being at odds with or even
                 separate from nature. </p>
-            <!-- <img src="https://source.unsplash.com/360x220/?river "alt = "river"> -->
+            <img src="https://source.unsplash.com/360x220/?river "alt = "river">
         </div>
         <div class="box">
             <h3>Mountains</h3>
@@ -127,12 +156,20 @@
                 wind and rain.
                 Alpine Meadows: Between craggy cliffs, alpine meadows bloom with wildflowers.relentless journey.that's
                 why Mountains are peace.</p>
-            <!-- <img src="https://source.unsplash.com/360x220/?mountain "alt = "nature"> -->
+            <img src="https://source.unsplash.com/360x220/?mountain "alt = "nature">
         </div>
     </div>
-    <div class="placeholders">
+
+    <div class="bottomBox">
         <input type="text" placeholder="i hope this website feel good to you...enter your expeerience">
+       <button class="sticyIcon">
+       </button>
     </div>
 </body>
 
 </html>
+
+
+
+
+

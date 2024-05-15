@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar using Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            margin: 2px;
+            padding: 2px;
+        }
+        .container{
+            align-items: center;
+            position: relative;
+            padding: 15px 100px;
+        }
+
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            column-gap: 70px;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .logo img {
+            width: 235px;
+            height: 75px;
+           justify-items: flex-start;
+        }
+        img{
+            float: left;
+            
+            padding:0 40px ;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <ul>
+            <li class="item"><a>Products</a></li>
+            <li class="item"><a>Pricing</a></li>
+            <li class="item"><a>Resources</a></li>
+            <li class="item"><a>About us</a></li>
+            <li class="item"><a>Security and compliance
+        </ul>
+        <div class="logo">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt = "logo">
+        </div>
+    </nav>
+</body>
+
+</html>
