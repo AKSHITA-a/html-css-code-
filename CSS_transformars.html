@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D-3D Transformers</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 70px;
+            background-color: aqua;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+.box0{
+            /* transform: rotate(2.5turn);  */
+            /* transform: rotateZ(90deg);  */
+            /* transform: rotateY(9deg); */
+            transform: rotatez(9deg);
+}
+.box1{
+    /* transform: scale(1.3); */
+    /* transform: scaley(2.4); */
+    /* transform: scaleX(3.1); */
+   transform: scaleZ(2);
+}
+.box2{
+    /* transform:skew(20deg); */
+    transform:skewX(30deg);
+    /* transform:skewY();  */
+}
+/* this is the most used property */
+.box3{
+     /* transform: translate(); */
+     /* transform: translate3D(); */
+     transform: translateX(30px); 
+     transform: translateY(45px);
+} 
+
+/* multiple transform property */
+.box4 {
+    transform:translateX(30px)  skewY(20deg) translateY(40px); 
+}
+   
+/* if we want hide navbar so we can give -100 % to translate property */
+
+.box5{
+    transform: rotate(407deg);
+    transform-origin: 21% 118%;
+}
+.container {
+            display: flex;
+            gap:62px;
+            width: auto;
+            height: 70vh;
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box0">BOX0</div>
+        <div class="box box1">BOX1</div>
+        <div class="box box2">BOX2</div>
+        <div class="box box3">BOX3</div>
+        <div class="box box4">BOX4</div>
+        <div class="box box5">BOX5</div>
+    </div>
+</body>
+
+</html>

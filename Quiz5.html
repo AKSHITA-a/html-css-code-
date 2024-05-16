@@ -7,21 +7,25 @@
     <title>Navbar using Flexbox</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        *{
-            margin: 2px;
-            padding: 2px;
+        .logo{
+
         }
-        .container{
+        nav {
+            display: flex;
             align-items: center;
             position: relative;
             padding: 15px 100px;
+            justify-content: space-around;
         }
 
-        ul{
+        .container ul {
             display: flex;
-            justify-content: flex-end;
-            list-style: none;
             column-gap: 70px;
+        }
+
+        ul li {
+            display: flex;
+            list-style: none;
             font-size: 1.2em;
             font-weight: 500;
         }
@@ -29,29 +33,42 @@
         .logo img {
             width: 235px;
             height: 75px;
-           justify-items: flex-start;
         }
-        img{
-            float: left;
-            
-            padding:0 40px ;
+        .container ul li span{
+            padding: 0 5px;
         }
     </style>
 </head>
 
 <body>
-    <nav class="container">
-        <ul>
-            <li class="item"><a>Products</a></li>
-            <li class="item"><a>Pricing</a></li>
-            <li class="item"><a>Resources</a></li>
-            <li class="item"><a>About us</a></li>
-            <li class="item"><a>Security and compliance
-        </ul>
-        <div class="logo">
-            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt = "logo">
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="logo">
+            </div>
+            <div class="container">
+                <ul>
+                    <li>  <span>Products  </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></li>
+                    <li>  <span>Pricing  </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></li>
+                    <li>  <span>Resources  </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></li>
+                    <li>  <span>About us  </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></li>
+                    <li>  <span>Security and compliance
+                </ul>
+            </div>
+        </nav>
+    </header>
 </body>
+</head>
 
 </html>

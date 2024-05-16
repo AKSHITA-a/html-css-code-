@@ -1,0 +1,16 @@
+.wrap{
+    display: flex;
+    margin: 30px auto;
+    max-width: 1000px;
+    width:90vw;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.box{
+    height: 70px;
+    width:20%;
+    border:1px solid yellow;
+    cursor: pointer;
+    
+}
