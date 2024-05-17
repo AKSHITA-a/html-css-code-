@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Transition</title>
+    <style>
+.container{
+    background-color: antiquewhite;
+    height: 70vh;
+    width: 80vw;
+}
+.box{
+    font-size: larger;
+    background-color: rgb(220, 149, 57);
+    width: 7vw;
+    height: 10vh;
+    cursor: pointer;
+   /* transition-property:all;
+   transition-property:background-color,transform: ;
+   transition-duration:5s;
+   transition-timing-function: cubic-bezier(0.74, 0.42, 0.04, 0.92);
+   transition-delay: 1s; */
+   
+/* We can use a combining property of all of this  */
+transition:all 2s ease-in 1s;
+}
+.translate{
+    transform: translateX(10vw) translateY(10vh);
+    background-color: rgb(0, 255, 89);
+}
+.box:hover {
+      width:10vw;
+      height:15vh;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">box</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animation</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            height: 70vh;
+            width: 80vw;
+        }
+
+        .box {
+            font-size: larger;
+            width: 7vw;
+            height: 10vh;
+            cursor: pointer;
+
+            /* animation: starting;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            animation-direction: alternate-reverse;
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation-fill-mode: backwards; */
+
+            /*.....Animation prototype.....*/
+            /* animation:name duration timing-function delay iteration-count  direction fill mode*/
+
+            animation:starting 3s ease-in-out 1s 1,
+            second 4s ease-in-out 1s 1
+        }
+
+        /* we can add multiple @keyframes */
+        @keyframes starting {
+            from {
+                background-color: blue;
+            }
+
+            to {
+                background-color: rgb(220, 149, 57);
+                transform: translateX(1000px) scaleY(1.5) translateY(500px);
+            }
+        }
+
+        @keyframes second{
+            0%{transform:rotate(100deg)}
+            20%{transform:rotate(200deg)}
+            50%{transform:rotate(290deg)}
+            80%{transform:rotate(310deg)}
+            100%{transform:rotate(450deg)}
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+    </div>
+</body>
+
+</html>
