@@ -1,31 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz using GRID</title>
- <!-- make the ulta website page downpart with using grid   -->
-    <!-- <link rel="import" href="Quiz5.html"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag for responsiveness -->
+    <title>UltraEdit.com</title>
 
- <style>
-    .container
-    {
-        display: grid;
-        font-size: 3.6em;
-        grid-template-rows: 150px 150px 150px;
-    }
-    .box_f
-    {
-       border:2px solid red;
-       background-color: aqua; 
-    }
-</style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif; /* Added body styles for consistency */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Added flex-wrap to allow wrapping on smaller screens */
+        }
+
+        .container ul {
+            display: flex;
+            column-gap: 20px; /* Reduced gap for smaller screens */
+            flex-wrap: wrap; /* Added flex-wrap for responsiveness */
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .logo img {
+            width: 150px; /* Reduced width for smaller screens */
+            height: auto;
+        }
+
+        .first {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+            padding: 20px; /* Added padding for spacing */
+            text-align: center; /* Centered text for better appearance on small screens */
+        }
+
+        .first span {
+            font-size: 2em; /* Reduced font size for smaller screens */
+        }
+
+        .first img {
+            margin: 0 23px;
+            width: 60px; /* Reduced width for smaller screens */
+            height: auto;
+        }
+
+        .first p {
+            font-size: 1.2em; /* Reduced font size for smaller screens */
+        }
+
+        .btn1 button {
+            cursor: pointer;
+            background-color: rgb(35, 180, 237);
+            color: white;
+            width: 100%;
+            max-width: 300px; /* Set max-width to prevent stretching */
+            font-size: 16px;
+            height: 57px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .second {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px; /* Added padding for spacing */
+        }
+
+        .second span p {
+            margin-top: 50px; /* Reduced margin for smaller screens */
+            font-size: 1.5em; /* Reduced font size for smaller screens */
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap; /* Added flex-wrap for responsiveness */
+            gap: 20px;
+            justify-content: center; /* Centered boxes for better layout */
+        }
+
+        .box {
+            font-weight:bolder;
+            text-align: center;
+            height: 190px;
+            width: 270px;
+            background-color: rgb(244, 237, 237);
+            font-size: 1.5em; /* Reduced font size for consistency */
+            padding: 10px; /* Added padding for spacing */
+        }
+
+        .box button {
+            background-color: rgb(64, 162, 64);
+            padding: 10px 20px; /* Adjusted padding for better appearance */
+            margin-top: 10px;
+            height: 45px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        
+
+        @media (max-width: 768px) { /* Media query for tablets and small devices */
+            nav {
+                flex-direction: column;
+                align-items: flex-start; /* Align items to start */
+            } 
+         
+
+            .container ul {
+                flex-direction: column;
+                align-items: flex-start; /* Align items to start */
+            }
+
+            .first span {
+                font-size: 1.5em; /* Further reduced font size for smaller screens */
+            }
+
+            .first p {
+                font-size: 1em; /* Further reduced font size for smaller screens */
+            }
+
+            .btn1 button {
+                width: 100%; /* Ensure button takes full width */
+            }
+
+            .second span p {
+                font-size: 1.2em; /* Further reduced font size for smaller screens */
+                text-align: center; /* Centered text for better appearance */
+            }
+
+            .box {
+                width: 100%;
+                max-width: 300px; /* Set max-width to prevent stretching */
+            }
+        }
+
+        @media (max-width: 480px) { /* Media query for mobile devices */
+            .logo img {
+                width: 120px; /* Further reduced width for smaller screens */
+            }
+
+            .first span {
+                font-size: 1.2em; /* Further reduced font size for smaller screens */
+            }
+
+            .first p {
+                font-size: 0.9em; /* Further reduced font size for smaller screens */
+            }
+
+            .btn1 button {
+                height: 50px; /* Adjusted height for smaller screens */
+                font-size: 14px; /* Adjusted font size for smaller screens */
+            }
+            
+            .second span p {
+                font-size: 1em; /* Further reduced font size for smaller screens */
+                padding: 10px;
+            }
+            .box {
+                width: 100%; /* Ensure boxes take full width */
+            }
+             span{
+                display: flex;
+                align-items: center;
+                gap :10px;
+            }
+            .second span img{
+                  margin-top: 40px;
+                  margin-bottom: 0%;
+                  padding: 0px 12px;
+                  width:42px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="box_f">
-            Download UltraEdit for Windows
-        </div>
-    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="logo">
+            </div>
+            <div class="container">
+                <ul>
+                    <li> <span>Products </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li> <span>Pricing </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li> <span>Resources </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li> <span>About us </span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li> <span>Security and compliance</span>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <span>
+                Download<strong> UltraEdit</strong> for Windows
+                <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" width="34px" alt="logo">
+            </span>
+            <p> Download and try UltraEdit before you buy it! This download includes the full<br> Windows version of the
+                text editor.</p>
+            <div class="btn1">
+                <button><strong> DOWNLOAD MAC OR LINUX VERSION</strong></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="second">
+            <span class="second_line">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="logo" width="32px">
+                <p>Download UltraEdit&nbsp;&nbsp;<small>v2024.0 (released 04/19/2024) |
+                        <a href="/updates/uehotfix/">Hotfix</a></small></p>
+            </span>
+            <div class="boxes">
+                <div class="box">English
+                    <button>Download 64-bit</button>
+                </div>
+                <div class="box">Deutsch
+                    <h6><small>German</small></h6>
+                    <button class="btn">Download 64-bit</button>
+                </div>
+                <div class="box">Italiano
+                    <h6><small>Italian</small></h6>
+                    <button class="btn">Download 64-bit</button>
+                </div>
+                <div class="box">Español
+                    <h6><small>Spanish</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+                <div class="box">français
+                    <h6><small>French</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+                <div class="box">Português brasileiro
+                    <h6><small>Brazilian Portuguese</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+                <div class="box">日本
+                    <h6><small>Japanese</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+                <div class="box">한국어
+                    <h6><small>Korean</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+                <div class="box">中国
+                    <h6><small>Chinese</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+                <div class="box">中國
+                    <h6><small>Traditional Chinese</small></h6>
+                    <button class="btn2">Download 64-bit</button>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
+
 </html>

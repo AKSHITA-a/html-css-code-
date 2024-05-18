@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Object fit and cover</title>
+    <style>
+        .container {
+            height: 70vh;
+            width: 40vw;
+            border: 2px solid rgb(254, 57, 238);
+            /* background-color: plum; */
+
+            /* we can add image as background too */
+
+            /* background-image: url(wp3.webp); */
+
+            /* if we have small image so it will be repeat  */
+
+            background-image: url(data:image/jpeg;base64,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);
+/* background-repeat: repeat-x;
+ */
+ background-repeat: no-repeat;
+ /* background-repeat: repeat-y; */
+/* background-clip: border-box; */
+
+
+            /* background-size: cover; */
+            /* background-position: center; */
+            flood-opacity: 0.8;
+        }
+
+        .box {
+            height: 220px;
+            width: 280px;
+            border: 1px solid white;
+            font-size: 2em;
+            font-style: bold;
+            color: aliceblue
+        }
+
+        img {
+            width: 294px;
+            height: 380px;
+            /* object-fit: contain ;
+            this is positioned anywhere in container to fit the width  
+            */
+
+
+            /*it cut the picture to maintain the width  but we can customize it as our need with expression or number values both */
+
+            object-fit: cover;
+            /* object-position: top left; */
+            /* object-position: 50% 50%; */
+            object-position: 10px 33px;
+
+            /* object-fit: fill; */
+            /* by default property of object fit */
+
+            /* object-fit:scale-down; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <img src="wp3.webp"> -->
+        <div class="box">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, itaque error! Excepturi adipisci impedit
+            .
+        </div>
+    </div>
+</body>
+
+</html>
