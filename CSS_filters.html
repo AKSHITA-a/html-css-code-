@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS filters</title>
+
+    <!-- CSS_Filters :The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders. -->
+    <style>
+        img{
+             display :flex;
+             flex-wrap: wrap;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             padding: 0 422px;
+             margin: 20px;
+             gap:20px;
+        }
+        .img1 {
+            filter: brightness(0.4);
+            filter: blur(5px);
+            filter: contrast(200%);
+            filter: drop-shadow(3px 5px 20px rgb(132, 228, 47));
+        }
+
+        .img2{
+            /* filter: grayscale(140%); */
+            filter: hue-rotate(207deg);
+            /* filter: invert(229%); */
+            
+        }
+
+        .img3{
+            /* filter: opacity(25%);
+            filter: saturate(30%); */
+            filter: sepia(60%);
+        }
+
+        /* <filter-function> values
+            filter: brightness(0.4);
+            filter: blur(5px);
+            filter: contrast(200%);
+            filter: drop-shadow(16px 16px 20px blue);
+            filter: grayscale(50%);
+            filter: hue-rotate(90deg);
+            filter: invert(75%);
+            filter: opacity(25%);
+            filter: saturate(30%);
+            filter: sepia(60%);
+
+            /* URL */
+        /* filter: url("filters.svg#filter-id"); */
+
+        /* Multiple filters */
+        /* filter: contrast(175%) brightness(3%);
+        filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue); */
+
+        /* Use no filter */
+        /* filter: none; */
+
+        /* Global values */
+        /* filter: inherit;
+        filter: initial;
+        filter: revert;
+        filter: revert-layer;
+        filter: unset; */
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://th.bing.com/th/id/OIP.amVmXsAHG6vVqQfX4nvLeAHaFc?w=256&h=188&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt="computer" class="img1 img">
+
+        <img src="https://th.bing.com/th/id/OIP.GEEFzJ4JMT_-6Q4WNIlU7QEsC7?w=251&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt="srk" class="img2 img">
+
+        <img src="https://th.bing.com/th/id/OIP.cZYXNwVXU3jSfusBe8vkigHaJQ?w=186&h=233&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt="kajol" class="img3 img">
+    </div>
+</body>
+
+</html>

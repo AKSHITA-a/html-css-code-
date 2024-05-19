@@ -16,37 +16,59 @@
 
         .roundBall {
             background-color: red;
-            height: 90px;  /* Adjust size as needed */
+            height: 90px;
+            /* Adjust size as needed */
             width: 90px;
             border-radius: 50%;
             position: absolute;
             bottom: 0;
             left: 0;
 
-            animation: bounce 1s cubic-bezier(0.59, 0.01, 0.57, 1.01);
+            /* animation: animateX 3s cubic-bezier(0.59, 0.01, 0.57, 1.01); */
+            animation: animateY 1s cubic-bezier(0.34, 0.56, 0.40, 1.01) infinite alternate,
+                       animateX 1s linear infinite;
         }
 
-        @keyframes bounce {
+        /* @keyframes bounce {
             0% {
                 transform: translate(0, 0);
             }
             16.67% {
-                transform: translate(calc(80vw / 6), -100px); /* First bounce up */
+                transform: translate(calc(80vw / 6), -100px); /* First bounce up 
             }
             33.33% {
-                transform: translate(calc(80vw / 3), 0); /* First bounce down */
+                transform: translate(calc(80vw / 3), 0); /* First bounce down 
             }
             50% {
-                transform: translate(calc(80vw / 2), -200px); /* Second bounce up */
+                transform: translate(calc(80vw / 2), -200px); /* Second bounce up 
             }
             66.67% {
-                transform: translate(calc(80vw * 2 / 3), 0); /* Second bounce down */
+                transform: translate(calc(80vw * 2 / 3), 0); /* Second bounce down 
             }
             83.33% {
-                transform: translate(calc(80vw * 5 / 6), -100px); /* Third bounce up */
+                transform: translate(calc(80vw * 5 / 6), -100px); /* Third bounce up 
             }
             100% {
-                transform: translate(80vw, 0); /* Third bounce down */
+                transform: translate(80vw, 0); /* Third bounce down 
+            }
+        } */
+        @keyframes animateX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes animateY{
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
             }
         }
     </style>
