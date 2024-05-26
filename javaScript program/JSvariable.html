@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS variables </title>
+</head>
+
+<body>
+    <script>
+        // basically var keyword are not use in most of the cases while let use in the place of var. 
+        // Var is globally scoped while let and const are block scoped 
+        // let can be updated but not re declared but var can be both
+        // we can not change value of const if once declared 
+
+
+        console.log("a=4")
+        console.log("b=8")
+        var a = 4;
+        var b = 6;
+        var c = "string";
+        console.log("sum :", a + b + 9)
+        console.log(typeof a, typeof b, typeof c)
+
+        // const a2 = 8;
+        // a2= a2+1      not allowed
+        // var 5_a =4;     not valid
+        var _4a = "new";   // valid
+        var $ = 4;          // valid 
+        console.log(_4a)
+
+
+        //The both values of let give different values output
+        let x = 20;           //locally scope variable 
+        {
+            let x = 30;
+            console.log("local value of x : ", x)
+        }
+        console.log("global value of x: ", x)
+
+        //The both values of let give same values output
+        var y = 20;           //locally scope variable 
+        {
+            var y = 30;
+            console.log("local value of y : ", y)
+        }
+        console.log("global value of x: ", y)
+
+        // Premitive datatypes are a set of basic datatypes and Object is a non primitive datatype .
+        // Null , Number , String , Symbol , undefined, Boolean , BigInt
+
+        let p = "stringVar";
+        let q = 120;
+        let r = 5.433;
+        let s = true;
+        const t = undefined;
+        let u = null;
+
+        console.log(p, q, r, s, t, u)
+        console.log(typeof p, typeof q, typeof r, typeof s, typeof t, typeof u)
+
+        //Object : it is a keyvalue pair combination
+        // syntax:                 let O={  name:"OBJECT_name", "key": value                       }
+        let O={  
+            name:"person", 
+            "job code" : 4579
+        }
+        console.log(typeof O)
+        console.log(O)
+
+        O.salary = "15k"
+        console.log(O)
+    </script>
+</body>
+
+</html>
