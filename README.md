@@ -6,3 +6,4 @@ nd elements defined in this series...but now its time to start java script
 and then go forword to projects.
 <br>
 and i also faces some issues to add my new code files to here , so i learn how do i solve it ...
+so here are some more changes 
